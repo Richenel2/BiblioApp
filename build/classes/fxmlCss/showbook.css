@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+.column{
+    -fx-backgound-color:none;
+    -fx-text-fill: #55aaff;
+}
+.jfx-scroll-pane .main-header {
+    -fx-background-color: #1c1b1f;
+}
+
+.jfx-scroll-pane .condensed-header {
+    -fx-background-color: #1c1b1f;
+}
+.jfx-scroll-pane .track-background {
+    -fx-background-color: #1c1b1f;
+}
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+.mainFxmlClass {
+
+}

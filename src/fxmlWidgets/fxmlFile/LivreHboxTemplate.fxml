@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="hboxLivre" alignment="CENTER_LEFT" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" spacing="50.0" style="-fx-background-color: #1c1b1f;" stylesheets="@../../fxmlCss/livreTemplate.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox.margin>
+        <Insets bottom="0.0" left="0.0" right="0.0" top="0.0" />
+    </HBox.margin>
+   <children>
+      <AnchorPane prefHeight="50.0" prefWidth="50.0">
+         <children>
+            <JFXCheckBox fx:id="checkShow" checkedColor="#ff9f2b" layoutX="21.0" layoutY="16.0" onAction="#activeLivre" text=" " textFill="#55aaff" unCheckedColor="#55aaff" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="50.0" prefWidth="100.0">
+         <children>
+            <SVGPath content="M22.47,5.2C22,4.96,21.51,4.76,21,4.59v12.03C19.86,16.21,18.69,16,17.5,16c-1.9,0-3.78,0.54-5.5,1.58V5.48 C10.38,4.55,8.51,4,6.5,4C4.71,4,3.02,4.44,1.53,5.2C1.2,5.36,1,5.71,1,6.08v12.08c0,0.58,0.47,0.99,1,0.99 c0.16,0,0.32-0.04,0.48-0.12C3.69,18.4,5.05,18,6.5,18c2.07,0,3.98,0.82,5.5,2c1.52-1.18,3.43-2,5.5-2c1.45,0,2.81,0.4,4.02,1.04 c0.16,0.08,0.32,0.12,0.48,0.12c0.52,0,1-0.41,1-0.99V6.08C23,5.71,22.8,5.36,22.47,5.2z M10,16.62C8.86,16.21,7.69,16,6.5,16 c-1.19,0-2.36,0.21-3.5,0.62V6.71C4.11,6.24,5.28,6,6.5,6C7.7,6,8.89,6.25,10,6.72V16.62z M19,0.5l-5,5V15l5-4.5V0.5z" fill="WHITE" layoutX="38.0" layoutY="14.0" opacity="0.7" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="titreShow" alignment="CENTER" opacity="0.7" prefWidth="100.0" text="Titre" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="auteruShow" alignment="CENTER" opacity="0.7" prefWidth="100.0" text="Auteur" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nbRestantShow" alignment="CENTER" opacity="0.7" prefWidth="100.0" text="Nbrestant" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="localisationShow" alignment="CENTER" opacity="0.7" prefWidth="100.0" text="localisation" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <JFXButton fx:id="optionShow" layoutX="14.0" layoutY="24.0" onAction="#showOption" style="-fx-background-color: none;" styleClass="optionLivre" text="..." textFill="#ff007f" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

@@ -1,0 +1,22 @@
+TargetButton{
+    -fx-background-color :none;
+    -fx-background-radius: 0em 2em 2em 0em;
+    -fx-border-color: none;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-family: Montserrat;
+}
+TargetButton:hover{
+    -fx-font-weight:bold;
+}
+button{
+    -fx-background-color :#2f303e;
+    -fx-background-radius: 2em;
+    -fx-border-color: none;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-family: Montserrat;
+}
+.labelle:hover{
+    -fx-text-fill:#55aaff;
+}

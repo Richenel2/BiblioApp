@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: none;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlController.LoginController">
+   <children>
+      <AnchorPane fx:id="panelLogin" layoutX="125.0" layoutY="235.0" prefHeight="160.0" prefWidth="300.0" style="-fx-background-color: #2f303e; -fx-background-radius: 1em;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <SVGPath content="M17.81 4.47c-.08 0-.16-.02-.23-.06C15.66 3.42 14 3 12.01 3c-1.98 0-3.86.47-5.57 1.41-.24.13-.54.04-.68-.2-.13-.24-.04-.55.2-.68C7.82 2.52 9.86 2 12.01 2c2.13 0 3.99.47 6.03 1.52.25.13.34.43.21.67-.09.18-.26.28-.44.28zM3.5 9.72c-.1 0-.2-.03-.29-.09-.23-.16-.28-.47-.12-.7.99-1.4 2.25-2.5 3.75-3.27C9.98 4.04 14 4.03 17.15 5.65c1.5.77 2.76 1.86 3.75 3.25.16.22.11.54-.12.7-.23.16-.54.11-.7-.12-.9-1.26-2.04-2.25-3.39-2.94-2.87-1.47-6.54-1.47-9.4.01-1.36.7-2.5 1.7-3.4 2.96-.08.14-.23.21-.39.21zm6.25 12.07c-.13 0-.26-.05-.35-.15-.87-.87-1.34-1.43-2.01-2.64-.69-1.23-1.05-2.73-1.05-4.34 0-2.97 2.54-5.39 5.66-5.39s5.66 2.42 5.66 5.39c0 .28-.22.5-.5.5s-.5-.22-.5-.5c0-2.42-2.09-4.39-4.66-4.39s-4.66 1.97-4.66 4.39c0 1.44.32 2.77.93 3.85.64 1.15 1.08 1.64 1.85 2.42.19.2.19.51 0 .71-.11.1-.24.15-.37.15zm7.17-1.85c-1.19 0-2.24-.3-3.1-.89-1.49-1.01-2.38-2.65-2.38-4.39 0-.28.22-.5.5-.5s.5.22.5.5c0 1.41.72 2.74 1.94 3.56.71.48 1.54.71 2.54.71.24 0 .64-.03 1.04-.1.27-.05.53.13.58.41.05.27-.13.53-.41.58-.57.11-1.07.12-1.21.12zM14.91 22c-.04 0-.09-.01-.13-.02-1.59-.44-2.63-1.03-3.72-2.1-1.4-1.39-2.17-3.24-2.17-5.22 0-1.62 1.38-2.94 3.08-2.94s3.08 1.32 3.08 2.94c0 1.07.93 1.94 2.08 1.94s2.08-.87 2.08-1.94c0-3.77-3.25-6.83-7.25-6.83-2.84 0-5.44 1.58-6.61 4.03-.39.81-.59 1.76-.59 2.8 0 .78.07 2.01.67 3.61.1.26-.03.55-.29.64-.26.1-.55-.04-.64-.29-.49-1.31-.73-2.61-.73-3.96 0-1.2.23-2.29.68-3.24 1.33-2.79 4.28-4.6 7.51-4.6 4.55 0 8.25 3.51 8.25 7.83 0 1.62-1.38 2.94-3.08 2.94s-3.08-1.32-3.08-2.94c0-1.07-.93-1.94-2.08-1.94s-2.08.87-2.08 1.94c0 1.71.66 3.31 1.87 4.51.95.94 1.86 1.46 3.27 1.85.27.07.42.35.35.61-.05.23-.26.38-.47.38z" fill="#fff9f9" layoutX="257.0" layoutY="68.0" opacity="0.5" scaleX="4.0" scaleY="4.0" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="70.0" />
+            <Label layoutX="28.0" layoutY="65.0" style="-fx-font-family: Montserrat; -fx-font-size: 24;" text="Login" textAlignment="CENTER" textFill="#55aaff" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="30.0" />
+            <Label fx:id="forget" layoutX="16.0" layoutY="134.0" onMouseClicked="#color" opacity="0.5" text="Mot de passe oublie ?" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <JFXButton layoutX="306.0" layoutY="122.0" onAction="#changeToOpenApp" prefHeight="30.0" prefWidth="78.0" ripplerFill="#ff007f" style="-fx-background-radius: 2em;" text="Login" textFill="#ff007f" underline="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="username" layoutX="266.0" layoutY="40.0" promptText="User Name" style="-fx-background-color: none; -fx-text-fill: white; -fx-border-color: #ff952baa; -fx-border-width: 3px; -fx-border-radius: 2em;" />
+            <PasswordField fx:id="password" layoutX="266.0" layoutY="80.0" promptText="Password" style="-fx-background-color: none; -fx-text-fill: white; -fx-border-color: #ff952baa; -fx-border-width: 3px; -fx-border-radius: 2em;" />
+            <Label fx:id="isTrue" layoutX="30.0" layoutY="96.0" text="compte innexistant" textFill="WHITE" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="AnchorPane" fx:id="panelLogo" layoutX="10.0" layoutY="10.0" prefHeight="250.0" prefWidth="500.0" style="-fx-background-color: #1b1c1f; -fx-background-radius: 1em;" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <Label fx:id="iconText" alignment="CENTER" layoutX="186.0" layoutY="14.0" style="-fx-font-family: montserrat; -fx-font-size: 40; -fx-font-weight: bold;" text="  BiblioApp" textAlignment="CENTER" textFill="#ff952b" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="100.0">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+               <graphic>
+                  <SVGPath content="M22.47,5.2C22,4.96,21.51,4.76,21,4.59v12.03C19.86,16.21,18.69,16,17.5,16c-1.9,0-3.78,0.54-5.5,1.58V5.48 C10.38,4.55,8.51,4,6.5,4C4.71,4,3.02,4.44,1.53,5.2C1.2,5.36,1,5.71,1,6.08v12.08c0,0.58,0.47,0.99,1,0.99 c0.16,0,0.32-0.04,0.48-0.12C3.69,18.4,5.05,18,6.5,18c2.07,0,3.98,0.82,5.5,2c1.52-1.18,3.43-2,5.5-2c1.45,0,2.81,0.4,4.02,1.04 c0.16,0.08,0.32,0.12,0.48,0.12c0.52,0,1-0.41,1-0.99V6.08C23,5.71,22.8,5.36,22.47,5.2z M10,16.62C8.86,16.21,7.69,16,6.5,16 c-1.19,0-2.36,0.21-3.5,0.62V6.71C4.11,6.24,5.28,6,6.5,6C7.7,6,8.89,6.25,10,6.72V16.62z M19,0.5l-5,5V15l5-4.5V0.5z" fill="#ff007f" scaleX="3.0" scaleY="3.0" />
+               </graphic>
+            </Label>
+            <AnchorPane fx:id="close" layoutX="348.0" layoutY="6.0" onMouseClicked="#closeApp" onMouseDragOver="#changeCloseColor" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <SVGPath content="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="WHITE" opacity="0.72" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+            <Label layoutX="235.0" layoutY="226.0" opacity="0.3" style="-fx-font-family: Montserrat;" text="UIECC Copyright (c) 2021" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="592.0" prefWidth="860.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlController.AddMemberController">
+    <stylesheets>
+        <URL value="@/fxmlCss/addbook.css" />
+    </stylesheets>
+   <children>
+      <ImageView fx:id="imageChange" fitHeight="261.0" fitWidth="261.0" layoutX="51.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/livre.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="23.0" layoutY="26.0" style="-fx-font-size: 35; -fx-font-family: Montserrat; -fx-font-weight: bold;" text="Nouveau Membre" textFill="#ff007f" />
+      <AnchorPane fx:id="imageCointain" layoutX="51.0" layoutY="166.0" onMouseClicked="#addImage" opacity="0.5" prefHeight="261.0" prefWidth="261.0" style="-fx-background-color: #1b1c1f;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <Label layoutX="69.0" layoutY="112.0" styleClass="hi" text="Changer l'image" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <SVGPath content="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="#ff9f2b" />
+               </graphic>
+            </Label>
+         </children></AnchorPane>
+      <VBox layoutX="367.0" layoutY="151.0" prefHeight="291.0" prefWidth="455.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="310.0" spacing="85.0">
+               <children>
+                  <Label text="Nom :" textFill="#55aaff">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nomMembre" prefHeight="34.0" prefWidth="185.0" style="-fx-background-color: #2f303e; -fx-border-color: none; -fx-background-radius: 2em; -fx-text-fill: white;" styleClass="txt" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="310.0" spacing="80.0">
+               <children>
+                  <Label text="Email :" textFill="#55aaff">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailMembre" prefHeight="34.0" prefWidth="185.0" style="-fx-background-color: #2f303e; -fx-border-color: none; -fx-background-radius: 2em; -fx-text-fill: white;" styleClass="txt" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="310.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="148.0" text="Telephone :" textFill="#55aaff">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="telMembre" prefHeight="34.0" prefWidth="185.0" style="-fx-background-color: #2f303e; -fx-border-color: none; -fx-background-radius: 2em; -fx-text-fill: white;" styleClass="txt" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="310.0" spacing="60.0">
+               <children>
+                  <Label text="Niveau :" textFill="#55aaff">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="niveauMembre" prefHeight="34.0" prefWidth="185.0" style="-fx-background-color: #2f303e; -fx-border-color: none; -fx-background-radius: 2em; -fx-text-fill: white;" styleClass="txt" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="310.0" spacing="70.0">
+               <children>
+                  <Label text="Filiere :" textFill="#55aaff">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="filiereMembre" prefHeight="34.0" prefWidth="185.0" style="-fx-background-color: #2f303e; -fx-text-fill: #fff; -fx-border-color: none;" styleClass="txt" unFocusColor="#2f303e" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXButton layoutX="182.0" layoutY="543.0" onAction="#enregistreMembre" prefHeight="35.0" prefWidth="96.0" style="-fx-background-radius: 2em; -fx-background-color: #ff07ff;" text="Enregister" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="513.0" layoutY="543.0" onAction="#initialiserChamps" prefHeight="35.0" prefWidth="82.0" style="-fx-background-radius: 2em; -fx-background-color: #ff07ff;" text="initialiser" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: none;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlController.AccueilController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #1b1c1f; -fx-background-radius: 1em;">
+         <children>
+            <AnchorPane prefHeight="0.0" prefWidth="250.0" style="-fx-background-color: #2f303e; -fx-background-radius: 1em 0em 0em 1em;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="2.0" layoutY="10.0" style="-fx-font-family: Montserrat; -fx-font-size: 24; -fx-font-weight: bold;" text=" BiblioApp" textFill="#ff9f2b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <contextMenu>
+                        <ContextMenu>
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                     <graphic>
+                        <SVGPath content="M22.47,5.2C22,4.96,21.51,4.76,21,4.59v12.03C19.86,16.21,18.69,16,17.5,16c-1.9,0-3.78,0.54-5.5,1.58V5.48 C10.38,4.55,8.51,4,6.5,4C4.71,4,3.02,4.44,1.53,5.2C1.2,5.36,1,5.71,1,6.08v12.08c0,0.58,0.47,0.99,1,0.99 c0.16,0,0.32-0.04,0.48-0.12C3.69,18.4,5.05,18,6.5,18c2.07,0,3.98,0.82,5.5,2c1.52-1.18,3.43-2,5.5-2c1.45,0,2.81,0.4,4.02,1.04 c0.16,0.08,0.32,0.12,0.48,0.12c0.52,0,1-0.41,1-0.99V6.08C23,5.71,22.8,5.36,22.47,5.2z M10,16.62C8.86,16.21,7.69,16,6.5,16 c-1.19,0-2.36,0.21-3.5,0.62V6.71C4.11,6.24,5.28,6,6.5,6C7.7,6,8.89,6.25,10,6.72V16.62z M19,0.5l-5,5V15l5-4.5V0.5z" fill="#ff007f" opacity="0.7" scaleX="1.5" scaleY="1.5" />
+                     </graphic>
+                  </Label>
+                  <VBox layoutX="75.0" layoutY="127.0" prefWidth="100.0" spacing="10.0" stylesheets="@../fxmlCss/accueil.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+                     <children>
+                        <Label style="-fx-font-size: 16px; -fx-font-family: Poppins; -fx-font-weight: bold;" styleClass="labelle" text=" Le materiel" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <SVGPath content="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z" fill="WHITE" />
+                           </graphic>
+                        </Label>
+                        <VBox fx:id="menuMateriel" spacing="10.0">
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <Label style="-fx-font-size: 16px; -fx-font-family: Poppins; -fx-font-weight: bold;" styleClass="labelle" text=" Les Membres" textFill="WHITE">
+                           <graphic>
+                              <SVGPath content="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z" fill="WHITE" />
+                           </graphic>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <VBox fx:id="menuMembre" spacing="10.0">
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </VBox>
+                        <Label style="-fx-font-size: 16px; -fx-font-family: Poppins; -fx-font-weight: bold;" styleClass="labelle" text=" Les options " textFill="WHITE">
+                           <graphic>
+                              <SVGPath content="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z" fill="WHITE" />
+                           </graphic>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <VBox fx:id="menuOption" spacing="10.0">
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="662.0" layoutY="206.0" prefHeight="30.0" prefWidth="200.0" styleClass="yvan" stylesheets="@../fxmlCss/accueil.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane layoutX="710.0" layoutY="17.0" prefHeight="30.0" prefWidth="90.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane fx:id="close" layoutX="-55.0" layoutY="-86.0" onMouseClicked="#closeApp" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <SVGPath content="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="WHITE" layoutX="-25.0" layoutY="-17.0" opacity="0.7" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane fx:id="maxApp" layoutX="-45.0" layoutY="-76.0" onMouseClicked="#maximiseApp" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <SVGPath content="M18 4H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H6V6h12v12z" fill="WHITE" layoutX="-25.0" layoutY="-17.0" opacity="0.7" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+                  <AnchorPane fx:id="minimize" layoutX="-45.0" layoutY="-76.0" onMouseClicked="#minimizeApp" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <SVGPath content="M6 19h12v2H6v-2z" fill="WHITE" layoutX="-25.0" layoutY="-17.0" opacity="0.7" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="parentNode" layoutX="437.0" layoutY="204.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+               <children>
+                  <AnchorPane fx:id="childrenNode" layoutX="109.0" layoutY="93.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+         <StackPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </StackPane.margin>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#000000b5" height="50.0" radius="24.5" spread="0.5" width="50.0" />
+         </effect>
+      </AnchorPane>
+   </children>
+</StackPane>

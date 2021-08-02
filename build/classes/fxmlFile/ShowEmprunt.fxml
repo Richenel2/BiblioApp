@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="changeAnchor" prefHeight="591.0" prefWidth="962.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlController.ShowEmpruntController">
+   <children>
+      <AnchorPane layoutX="31.0" layoutY="62.0" prefHeight="60.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label fx:id="title" layoutX="14.0" layoutY="2.0" style="-fx-font-family: Montserrat; -fx-font-size: 40; -fx-font-weight: bold;" text="Les Emprunts" textFill="#ff007f" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="90.0" prefHeight="50.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <AnchorPane layoutX="64.0" layoutY="-64.0" maxHeight="200.0" minHeight="40.0" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: #2f303e; -fx-background-radius: 2em;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <TextField fx:id="searchField" layoutX="-9.0" layoutY="-14.0" onKeyReleased="#searchEmprunt" prefWidth="240.0" promptText="Recherche" style="-fx-background-color: none; -fx-border-color: none; -fx-text-fill: #fffa;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <SVGPath content="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" fill="WHITE" layoutX="-231.0" layoutY="-236.0" style="-fx-scale-x: 0.03; -fx-scale-y: 0.03;" />
+               </children>
+            </AnchorPane>
+            <JFXComboBox fx:id="choixSearch" focusColor="#ff007f" labelFloat="true" layoutX="304.0" layoutY="16.0" onAction="#tri" prefHeight="29.0" prefWidth="148.0" promptText="Choix de recherche" style="-jfx-text-fill: #ffffff;" unFocusColor="#ff9f2b" AnchorPane.leftAnchor="304.0" AnchorPane.topAnchor="16.0" />
+            <JFXButton fx:id="btnDelete" layoutX="668.0" layoutY="10.0" prefHeight="45.0" prefWidth="137.0" style="-fx-background-color: #2f303e; -fx-text-fill: #ff9f2b; -fx-background-radius: 2em; -fx-font-family: Montserrat; -fx-font-size: 15px; -fx-font-weight: bold;" text="Supprimer" textFill="#ff9f2b" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="System Bold" size="64.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnRemettre" layoutX="740.0" layoutY="5.0" onAction="#remettreBook" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: #2f303e; -fx-text-fill: #ff9f2b; -fx-background-radius: 2em; -fx-font-family: Montserrat; -fx-font-size: 15px; -fx-font-weight: bold;" text="Remettre" textFill="#ff9f2b" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="System Bold" size="64.0" />
+               </font>
+            </JFXButton>
+            <JFXRadioButton fx:id="radioButton" layoutX="471.0" layoutY="22.0" onAction="#changeToGrille" text="Afficher en grille" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="50.0" layoutY="121.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <HBox fx:id="hBoxPrincipale" alignment="CENTER_LEFT" prefHeight="50.0" spacing="50.0" style="-fx-background-color: #2f303e;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="50.0" prefWidth="50.0" />
+                  <Label alignment="CENTER" prefWidth="100.0" text="image" textFill="#55aaff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefWidth="100.0" text="Nom Membre" textFill="#55aaff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefWidth="100.0" text="Nom livre" textFill="#55aaff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefWidth="100.0" text="penalite" textFill="#55aaff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefWidth="100.0" text="Statut" textFill="#55aaff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefWidth="100.0" text="Option" textFill="#55aaff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <JFXScrollPane fx:id="scrollpane" layoutX="238.0" layoutY="124.0" style="-fx-background-color: none; -fx-border: none;" styleClass="jfx-scroll-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" pannable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1b1c1f;" stylesheets="@../fxmlCss/showbook.css">
+                     <content>
+                        <VBox fx:id="vboxLivre" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </JFXScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
